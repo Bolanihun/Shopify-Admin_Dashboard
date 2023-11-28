@@ -55,7 +55,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 160px;
+    width: 100%
     
 }
 .logo{
@@ -63,8 +63,6 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 7.517px;
-    flex: 1 0 0;
 }
  .search{
     display: flex;

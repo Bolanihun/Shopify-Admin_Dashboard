@@ -172,23 +172,6 @@
         }, 3000)
 
         }
-        function handleMarkAsNotDone(){
-            completedIcon.classList.add(hiddenCheckClass);
-            checkLoadingSpinner.classList.remove(hiddenCheckClass);
-
-            checkButtonStatus.ariaLabel = 'Loading, Please wait.';
-
-            setTimeout (()=>{
-                checkLoadingSpinner.classList.add(hiddenCheckClass);
-                notCompletedIcon.classList.remove(hiddenCheckClass);
-                progressBar.value = Math.min(progressBar.value - 1, 0);
-                updateProgressLabel();
-                checkButton.ariaLabel = checkButton.ariaLabel.replace("as not done", "as done");
-
-                checkButtonStatus.ariaLabel = 'Sucessfully marked as not done';
-            }, 3000)
-
-        }
 
         function handleMarkDoneOrNotDone(){
         const MarkedAsDone = checkButton.classList.contains(checkBoxDone);
