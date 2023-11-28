@@ -1,5 +1,5 @@
 
- function app(){
+//  function app(){
 
 
     const banner = document.querySelector('.banner');
@@ -263,28 +263,20 @@
     
     
     
-    
-    function showOnboardingMenu(chevron){
+    chevronIcon.addEventListener('click', showOnboardingMenu)
+    function showOnboardingMenu() {
+        const toggle = onboardContainer.classList.toggle('hide')
+        if(toggle) {
+            chevronIcon.style.transform = "rotate(180deg)";
 
-        onboardContainer.classList.toggle('showOnboardingMenuContent')
-        /* if (display == 1)
-        {
-          onboardingMenu.style.display = 'block';
-          display = 0;
-        
         }
         else{
-          onboardingMenu.style.display = 'none';
-          display = 1;
-          
-        } */
-    
-        chevronUp.classList.toggle('transform');
+            chevronIcon.style.transform = "rotate(0deg)";
+
+        }
     };
-    showOnboardingMenu();
-        
      
     
-}
+// }
 
-app();
+// app();
