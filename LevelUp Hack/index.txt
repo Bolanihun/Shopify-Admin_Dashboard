@@ -1,0 +1,119 @@
+                Search
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 13 14" fill="#E3E3E3">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82264 10.3833C7.89957 11.0841 6.74835 11.5 5.5 11.5C2.46243 11.5 0 9.03757 0 6C0 2.96243 2.46243 0.5 5.5 0.5C8.53757 0.5 11 2.96243 11 6C11 7.24835 10.5841 8.39957 9.8833 9.32264L12.7803 12.2197C13.0732 12.5126 13.0732 12.9874 12.7803 13.2803C12.4874 13.5732 12.0126 13.5732 11.7197 13.2803L8.82264 10.3833ZM9.5 6C9.5 8.20914 7.70914 10 5.5 10C3.29086 10 1.5 8.20914 1.5 6C1.5 3.79086 3.29086 2 5.5 2C7.70914 2 9.5 3.79086 9.5 6Z" fill="#fff"/>
+                  </svg>
+
+
+                  /*  onboardingTitles.addEventListener('click', ()=>{
+    onboardingContent.classList.toggle('show_content')
+ }) */
+
+ /* document.addEventListener("DOMContentLoaded", function(){
+
+    onboardingStep.forEach(step => {
+        step.addEventListener('click',function(){
+            const onboardingContent = this.querySelector('.bottom_step');
+            onboardingContent.classList.toggle('show_content');
+            
+        })
+    })
+}) */
+
+
+ /*chevron.addEventListener('click', function (e) {
+
+        const menu = e.currentTarget.parentElement.parentElement
+    (function (item){
+     if (item !== menu){
+         item.classList.remove("hide-menu")
+     }
+    })
+    menu.classList.toggle("hide-menu")
+      } 
+      chevronIcon.addEventListener('click',  function(){
+   chevronUp.classList.toggle('.transform')
+ })
+ function showMenu() {
+    
+}*/
+
+/* onboardingTitles.forEach((onboardingTitle)=> {
+    onboardingTitle.addEventListener('click',()=>{
+        if (onboardingTitle.classList.contains('.show_content')) {
+            onboardingTitle.classList.remove('show_content')
+        }
+        else{
+          const  onboardingStepsIsopen = document.querySelectorAll('show_content')
+          onboardingStepsIsopen.forEach((onboardingStepIsopen)=>{
+            onboardingStepIsopen.classList.remove('show_content');
+          });
+          onboardingTitle.classList.add('show_content');
+        };
+    })
+})
+ */
+
+ /*function changeSvg() {
+    var check = document.getElementsByClassName('check')
+}*/
+
+ //chevronDown.classList.add("hide");
+            //chevronIcon.classList.remove(chevronDown)
+             //;chevronIcon.classList.add(chevronUp)
+            //chevronDown.style.display = 'none';chevronDown.classList.add('hide')
+
+
+            /* chevronUp.classList.add("hide");
+            chevronDown.classList.add("show")
+            chevronIcon.classList.remove(chevronUp);
+            chevronIcon.classList.add(chevronDown);
+            chevronUp.style.display= 'none';
+            chevronDown.style.display = 'block';
+            */
+
+             /*  alertDropdown.classList.toggle('toggle');
+    const isExpanded = 
+   alert.attributes["aria-expanded"].value ===
+   "true"; 
+    
+
+    if (isExpanded){
+       alert.ariaExpanded = "false";
+       alert.focus();
+    }
+    else{
+       alert.ariaExpanded = "true";
+    } */
+
+
+    function showOnboardingMenu(chevron){
+          if (display == 1)
+          {
+            onboardingMenu.style.display = 'block';
+            display = 0;     
+          }
+          else{
+            onboardingMenu.style.display = 'none';
+            display = 1;
+          }
+    
+          chevronUp.classList.toggle('transform');
+     };
+     showOnboardingMenu();
+
+      /*  function updateProgress() {
+        let checkedCount = 0;
+        checkButton 
+        if (handleMarkDoneOrNotDone){
+            checkedCount ++;
+        }
+        else{
+            checkedCount --;
+        }
+
+        progressBar.value = Math.min(checkedCount);
+        updateProgressLabel();
+
+    };
+    
+    updateProgress(); */

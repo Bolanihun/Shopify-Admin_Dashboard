@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .onboarding-container {
+      width: 80%;
+      margin: auto;
+    }
+
+    .step {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .bottom_step {
+      display: none;
+    }
+
+    .show_content .bottom_step {
+      display: block;
+    }
+  </style>
+  <title>Onboarding Steps</title>
+</head>
+<body>
+
+  <div class="onboarding-container">
+    <div class="step">
+      <div class="top_step">Step 1</div>
+      <div class="bottom_step">Content for Step 1</div>
+    </div>
+    
+    <div class="step">
+      <div class="top_step">Step 2</div>
+      <div class="bottom_step">Content for Step 2</div>
+    </div>
+
+    <div class="step">
+      <div class="top_step">Step 3</div>
+      <div class="bottom_step">Content for Step 3</div>
+    </div>
+  </div>
+
+  <script>
+    
+    // Assuming you have a container element for onboarding steps
+const onboardingContainer = document.querySelector('.onboarding-container');
+
+// Assuming each onboarding step has the class 'step'
+const onboardingSteps = document.querySelectorAll('.step');
+
+// Assuming each onboarding content has the class 'bottom_step'
+const onboardingContent = document.querySelectorAll('.bottom_step');
+
+function handleOnboardingStepClick(e) {
+    const clickedStep = e.target.closest('.step');
+
+    if (!clickedStep) {
+        return;
+    }
+
+    onboardingSteps.forEach(function (step) {
+        if (step !== clickedStep) {
+            step.classList.remove('show_content');
+        }
+    });
+
+    clickedStep.classList.toggle('show_content');
+}
+
+// Add a single event listener to the container
+onboardingContainer.addEventListener('click', handleOnboardingStepClick);
+  </script>
+
+</body>
+</html>
